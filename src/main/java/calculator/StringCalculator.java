@@ -6,7 +6,15 @@ public class StringCalculator {
             return 0;
         }
 
-        String[] tokens = input.split("[,:]");
+        String delimiter = "[,:]"; // 기본 구분자
+
+        if(input.startsWith("//")){
+            int delimiterIndex = input.indexOf("\n");
+            delimiter = input.substring(2, delimiterIndex);
+            input = input.substring(delimiterIndex + 1);
+        }
+
+        String[] tokens = input.split(delimiter);
         int sum = 0;
 
         for(String token : tokens){
