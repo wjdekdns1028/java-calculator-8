@@ -6,6 +6,8 @@ public class StringCalculator {
             return 0;
         }
 
+        input = input.replace("\\n", "\n");
+
         String delimiter = "[,:]"; // 기본 구분자
 
         if(input.startsWith("//")){
