@@ -8,6 +8,6 @@ public class Application {
         String input = Console.readLine();
 
         int result = StringCalculator.calculate(input);
-        System.out.println("결과 : " + result);
+        System.out.println("결과 : " + result); // 결과 출력
     }
 }
